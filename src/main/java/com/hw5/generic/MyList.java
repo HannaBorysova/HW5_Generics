@@ -13,7 +13,7 @@ public class MyList<T extends Number> {
         list.add(data);
     }
 
-    public T getMinValue() {
+    public T findMinValue() {
         if (list.size() > 0) {
             int min = 0;
             for (int i = 1; i < list.size(); i++) {
@@ -26,7 +26,7 @@ public class MyList<T extends Number> {
         return null;
     }
 
-    public T getMaxValue() {
+    public T findMaxValue() {
         if (list.size() > 0) {
             int max = 0;
             for (int i = 1; i < list.size(); i++) {

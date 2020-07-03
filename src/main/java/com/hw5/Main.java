@@ -11,7 +11,7 @@ public class Main {
         myList.add(32);
         myList.add(26);
 
-        System.out.println("Largest number: " + myList.getMaxValue());
-        System.out.println("Smallest number: " + myList.getMinValue());
+        System.out.println("Largest number: " + myList.findMaxValue());
+        System.out.println("Smallest number: " + myList.findMinValue());
     }
 }
