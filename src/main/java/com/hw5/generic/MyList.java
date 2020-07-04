@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class MyList<T extends Number> {
-    private ArrayList<T> list;
+    List list = new ArrayList<T>();
 
     public MyList() {
         list = new ArrayList<T>();
@@ -15,12 +15,12 @@ public class MyList<T extends Number> {
         list.add(data);
     }
 
-    public T findMinValue() {
+    public Object findMinValue() {
         Collections.sort((List) list);
         return list.get(0);
     }
 
-    public T findMaxValue() {
+    public Object findMaxValue() {
         Collections.sort(list, Collections.reverseOrder());
         return list.get(0);
     }
