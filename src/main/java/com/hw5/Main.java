@@ -2,6 +2,7 @@ package main.java.com.hw5;
 
 import main.java.com.hw5.generic.MyList;
 
+
 public class Main {
 
     public static void main(String[] args) {

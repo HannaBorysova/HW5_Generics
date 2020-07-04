@@ -5,22 +5,18 @@ import java.util.Collections;
 import java.util.List;
 
 public class MyList<T extends Number> {
-    List list = new ArrayList<T>();
-
-    public MyList() {
-        list = new ArrayList<T>();
-    }
+    ArrayList<T> list = new ArrayList<>();
 
     public void add(T data) {
         list.add(data);
     }
 
-    public Object findMinValue() {
+    public T findMinValue() {
         Collections.sort((List) list);
         return list.get(0);
     }
 
-    public Object findMaxValue() {
+    public T findMaxValue() {
         Collections.sort(list, Collections.reverseOrder());
         return list.get(0);
     }
