@@ -1,6 +1,8 @@
 package main.java.com.hw5.generic;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class MyList<T extends Number> {
     private ArrayList<T> list;
@@ -14,28 +16,12 @@ public class MyList<T extends Number> {
     }
 
     public T findMinValue() {
-        if (list.size() > 0) {
-            int min = 0;
-            for (int i = 1; i < list.size(); i++) {
-                if (list.get(i).intValue() < list.get(min).intValue()) {
-                    min = i;
-                }
-            }
-            return list.get(min);
-        }
-        return null;
+        Collections.sort((List) list);
+        return list.get(0);
     }
 
     public T findMaxValue() {
-        if (list.size() > 0) {
-            int max = 0;
-            for (int i = 1; i < list.size(); i++) {
-                if (list.get(i).intValue() > list.get(max).intValue()) {
-                    max = i;
-                }
-            }
-            return list.get(max);
-        }
-        return null;
+        Collections.sort(list, Collections.reverseOrder());
+        return list.get(0);
     }
 }
