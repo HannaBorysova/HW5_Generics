@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class MyList<T extends Number> {
-    ArrayList<T> list = new ArrayList<>();
+    List<T> list = new ArrayList<>();
 
     public void add(T data) {
         list.add(data);
